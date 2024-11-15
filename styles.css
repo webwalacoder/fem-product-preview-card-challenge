@@ -1,0 +1,149 @@
+/* MOBILE FIRST DESIGN */
+
+*,
+*::before, 
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary */
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+
+    /* Neutral */
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+    /* Hover */
+    --Dark-cyan-hover: hsl(158, 36%, 27%);
+
+    /* Font Families */
+    --font-Montserrat: 'Montserrat', sans-serif;
+    --font-Fraunces: 'Fraunces', serif;
+
+    /* Font Sizes */
+    --Heading-font-size: clamp(1rem, 8vw, 2.7rem);
+    --Body-font-size: clamp(0.825rem, 3vw, 1rem);
+    --Perfume-font-size: clamp(0.625rem, 3vw, 1rem);
+}
+
+body {
+    background-color: var(--Cream);
+    font-family: var(--font-Montserrat);
+    font-size: var(--Body-font-size);
+    height: 100vh;
+    width: 100%;
+    color: var(--Dark-grayish-blue);
+    padding: 0 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h1 {
+    color: var(--Very-dark-blue);
+}
+
+.product-card {
+    background-color: var(--White);
+    border-radius: 0.625rem;
+    max-width: 40rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card-image-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.625rem 0.625rem 0 0;
+}
+
+.product-card-image-desktop {
+    display: none;
+}
+
+.product-card-description {
+    padding: 1.5rem;
+}
+
+.perfume {
+    font-size: var(--Perfume-font-size);
+    letter-spacing: 0.35em;
+    margin-bottom: 0.625rem;
+}
+
+.product-about {
+    margin: 1.5rem 0;
+    line-height: 1.5;
+}
+
+.product-prices {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+h1, .current-price {
+    font-family: var(--font-Fraunces);
+    font-size: var(--Heading-font-size);
+    font-weight: 700;
+}
+
+.current-price {
+    color: var(--Dark-cyan);
+}
+
+.add-to-cart-btn {
+    background-color: var(--Dark-cyan);
+    border-radius: 0.3rem;
+    border: none;
+    color: var(--White);
+    width: 100%;
+    font-weight: 700;
+    padding: 1rem 0;
+    margin-top: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+/* For larger screen sizes (Responsiveness) */
+@media screen and (min-width: 26.625rem) {
+    .product-card {
+        flex-direction: row;
+    }    
+
+    .product-card-image-mobile {
+        display: none;
+    }
+    
+    .product-card-image-desktop {
+        display: block;
+        width: 50%;
+        height: auto;
+        border-radius: 0.625rem 0 0 0.625rem;
+    }
+
+    .add-to-cart-btn:hover {
+        cursor: pointer;
+        background-color: var(--Dark-cyan-hover);
+    }
+}
+
+/* Hover effect for pointer devices only */
+@media (hover:hover) {
+    .product-card-description {
+        width: 50%;
+    }
+}
