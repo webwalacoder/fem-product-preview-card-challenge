@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub Repository](https://your-solution-url.com)
+- Solution URL: [GitHub Repository](https://github.com/webwalacoder/fem-product-preview-card-challenge)
 - Live Site URL: [Live Preview](https://your-live-site-url.com)
 
 ## My process
