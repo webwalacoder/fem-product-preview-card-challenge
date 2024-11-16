@@ -26,9 +26,9 @@
     --font-Fraunces: 'Fraunces', serif;
 
     /* Font Sizes */
-    --Heading-font-size: clamp(1rem, 8vw, 2.7rem);
-    --Body-font-size: clamp(0.825rem, 3vw, 1rem);
-    --Perfume-font-size: clamp(0.625rem, 3vw, 1rem);
+    --Heading-font-size: clamp(1.525rem, 8vw, 2rem);
+    --Body-font-size: clamp(0.825rem, 3vw, 0.9rem);
+    --Perfume-font-size: clamp(0.625rem, 2vw, 0.825rem);
 }
 
 body {
@@ -53,7 +53,7 @@ h1 {
 .product-card {
     background-color: var(--White);
     border-radius: 0.625rem;
-    max-width: 40rem;
+    max-width: 21.563rem;
 
     display: flex;
     flex-direction: column;
@@ -119,8 +119,13 @@ h1, .current-price {
 }
 
 /* For larger screen sizes (Responsiveness) */
-@media screen and (min-width: 26.625rem) {
+@media screen and (min-width: 37.5rem) {
+    body {
+        padding: 0;
+    }
+
     .product-card {
+        max-width: 35rem;
         flex-direction: row;
     }    
 
@@ -134,16 +139,12 @@ h1, .current-price {
         height: auto;
         border-radius: 0.625rem 0 0 0.625rem;
     }
-
-    .add-to-cart-btn:hover {
-        cursor: pointer;
-        background-color: var(--Dark-cyan-hover);
-    }
 }
 
 /* Hover effect for pointer devices only */
 @media (hover:hover) {
-    .product-card-description {
-        width: 50%;
-    }
+    .add-to-cart-btn:hover {
+        cursor: pointer;
+        background-color: var(--Dark-cyan-hover);
+    }    
 }
